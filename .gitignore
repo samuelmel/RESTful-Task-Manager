@@ -1,0 +1,25 @@
+
+venv/ 
+.env/
+
+.env
+.env.*
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+instance/
+tasks.db
+.flaskenv
+
+
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+
+.DS_Store # macOS
+.vscode/  # Configurações pessoais do VS Code

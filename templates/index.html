@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas (API Flask)</title>
+    <!-- Carrega o Tailwind CSS para estilização moderna e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+    <div class="max-w-4xl mx-auto bg-[#161b22] p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700/50">
+        <h1 class="text-3xl sm:text-4xl font-extrabold mb-8 text-center text-[#58a6ff]">
+            Gerenciador de Tarefas REST (PostgreSQL)
+        </h1>
+
+        <div class="mb-8 p-5 bg-[#0d1117] rounded-lg border border-gray-700">
+            <h2 class="text-xl font-semibold mb-4 text-white">Adicionar Nova Tarefa</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                <input type="text" id="taskTitle" placeholder="Título da Tarefa (Obrigatório)" 
+                       class="sm:col-span-2 p-3 rounded-lg bg-[#21262d] text-white border border-gray-600 focus:border-[#58a6ff] focus:ring-1 focus:ring-[#58a6ff] transition">
+                
+                <input type="text" id="taskDescription" placeholder="Descrição (Opcional)" 
+                       class="sm:col-span-1 p-3 rounded-lg bg-[#21262d] text-white border border-gray-600 focus:border-[#58a6ff] focus:ring-1 focus:ring-[#58a6ff] transition">
+                
+                <button onclick="createTask()" 
+                        class="sm:col-span-1 bg-[#238636] hover:bg-[#2ea043] text-white font-bold py-3 rounded-lg transition duration-300 shadow-md">
+                    Adicionar
+                </button>
+            </div>
+        </div>
+
+        <!-- Lista de Tarefas -->
+        <h2 class="text-2xl font-semibold mb-4 text-white">Minhas Tarefas</h2>
+        <div id="taskList" class="space-y-3">
+            <p class="text-center text-gray-500 italic p-4" id="loadingMessage">Carregando tarefas...</p>
+        </div>
+
+        <div id="toast" class="fixed bottom-5 right-5 p-3 rounded-lg shadow-lg text-white transform translate-x-full transition-transform duration-500 ease-in-out" style="min-width: 250px;"></div>
+
+    </div>
+
+    
+</body>
+</html>
