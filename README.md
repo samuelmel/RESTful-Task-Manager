@@ -52,7 +52,7 @@ source venv/bin/activate
 .\venv\Scripts\Activate
 ```
 
-3. Install Dependencies
+### 3. Install Dependencies
 With the venv activated, install all packages listed in requirements.txt:
 
 ```bash
@@ -60,7 +60,7 @@ With the venv activated, install all packages listed in requirements.txt:
 pip install -r requirements.txt
 ```
 
-4. Configure Environment Variables (.env)
+### 4. Configure Environment Variables (.env)
 Create a file in the project root called .env. This file must contain the connection string for your PostgreSQL database.
 
 .env Model:
@@ -68,7 +68,7 @@ Create a file in the project root called .env. This file must contain the connec
 # Replace the credentials and host with your own
 SQLALCHEMY_DATABASE_URI="postgresql://USER:PASSWORD@HOST:PORT/DATABASENAME"
 
-5. Start the Flask Application
+### 5. Start the Flask Application
 The application is configured to start the API routes and create the database tables automatically.
 
 ```bash
@@ -79,7 +79,12 @@ export FLASK_APP=app
 # Runs the application
 flask run
 ```
-6. Access
+### 6. Access
 Access the application in your browser, usually at:
 
 ➡️ http://127.0.0.1:5000/
+
+
+### 🖼️ Preview
+<img width="1875" height="954" alt="image" src="https://github.com/user-attachments/assets/1f04c263-4c00-4d3a-91ef-9350194d0067" />
+
